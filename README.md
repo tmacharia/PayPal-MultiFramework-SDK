@@ -2,6 +2,7 @@
 Multi-framework PayPal SDK for .NET developers targeting different frameworks and run-times e.g .NET Framework, .NET Core, and .NETStandard 
 
 [![Build status](https://ci.appveyor.com/api/projects/status/pp4hovop0ye54dav?svg=true)](https://ci.appveyor.com/project/devTimmy/paypal-multiframework-sdk)
+[![Build Status](https://travis-ci.org/devTimmy/PayPal-MultiFramework-SDK.svg?branch=master)](https://travis-ci.org/devTimmy/PayPal-MultiFramework-SDK)
 
 ## Notice
 
