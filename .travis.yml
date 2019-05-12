@@ -1,9 +1,8 @@
 language: csharp
 mono: none
 dotnet: 2.1.502
-solution: Paginator.sln
+solution: PayPal SDK (MultiFramework).sln
 
 script:
-  - dotnet restore
-  - dotnet build Paginator
-  - dotnet test Tests
+  - dotnet restore src/PayPal.MultiTarget/PayPal.MultiTarget.csproj --framework netcoreapp2.0
+  - dotnet build src/PayPal.MultiTarget/PayPal.MultiTarget.csproj --framework netcoreapp2.0
