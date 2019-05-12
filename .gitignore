@@ -6,6 +6,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+!/src/PayPal.MultiTarget/Log/
+!/src/PayPal.MultiTarget/Log/*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
