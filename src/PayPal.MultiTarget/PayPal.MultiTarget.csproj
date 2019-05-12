@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>
+      net40;net45;net451;net461;net462;
+      netstandard2.0;
+      netcoreapp2.0;
+    </TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Timothy Macharia</Authors>
+    <Company>Neon Clouds</Company>
+    <Product>PayPal SDK</Product>
+    <Description>Multi-framework PayPal SDK for .NET developers targeting different frameworks and run-times e.g .NET Framework, .NET Core, and .NETStandard</Description>
+    <PackageLicenseUrl>https://github.com/devTimmy/PayPal-MultiFramework-SDK/blob/master/README.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/devTimmy/PayPal-MultiFramework-SDK</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/devTimmy/PayPal-MultiFramework-SDK</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>paypal, paypal rest sdk</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <!--Conditionally references for different framework targets-->
+  
+  <ItemGroup Condition="&#xD;&#xA;'$(TargetFramework)' == 'netstandard2.0' or &#xD;&#xA;&#xD;&#xA;    '$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="&#xD;&#xA;'$(TargetFramework)' == 'net45' or &#xD;&#xA;&#xD;&#xA;    '$(TargetFramework)' == 'net40' or &#xD;&#xA;&#xD;&#xA;    '$(TargetFramework)' == 'net451' or &#xD;&#xA;&#xD;&#xA;    '$(TargetFramework)' == 'net461' or &#xD;&#xA; &#xD;&#xA;    '$(TargetFramework)' == 'net462'">
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+  <ItemGroup Condition="&#xD;&#xA;'$(TargetFramework)' == 'netstandard2.0' or &#xD;&#xA;&#xD;&#xA;    '$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
