@@ -4,5 +4,5 @@ dotnet: 2.1.502
 solution: PayPal SDK (MultiFramework).sln
 
 script:
-  - dotnet restore src/PayPal.MultiTarget/PayPal.MultiTarget.csproj --framework netcoreapp2.0
-  - dotnet build src/PayPal.MultiTarget/PayPal.MultiTarget.csproj --framework netcoreapp2.0
+  - dotnet restore
+  - dotnet build
