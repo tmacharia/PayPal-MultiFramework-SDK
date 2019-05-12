@@ -1,13 +1,42 @@
+#version: 1.0.{build}
+#pull_requests:
+#  do_not_increment_build_number: true
+#skip_tags: true
+#image: Visual Studio 2017
+#configuration: Release
+#platform: Any CPU
+#build:
+#  parallel: true
+#  verbosity: normal
+#notifications:
+#- provider: Email
+#  to:
+#  - timothy.macharia@outlook.com
+#  on_build_success: true
+#  on_build_failure: true
+#  on_build_status_changed: false
+
+
 version: 1.0.{build}
-pull_requests:
-  do_not_increment_build_number: true
-skip_tags: true
 image: Visual Studio 2017
-configuration: Release
-platform: Any CPU
-build:
-  parallel: true
-  verbosity: normal
+branches:
+  only:
+  - master
+init:
+  # Good practise, because Windows line endings are different from Unix/Linux ones
+  - cmd: git config --global core.autocrlf true
+install:
+  # Install repo specific stuff here
+before_build:
+  # Display .NET Core version
+  - cmd: dotnet --version
+  # Display minimal restore text
+  - cmd: dotnet restore --verbosity m
+build_script:
+  # output will be in ./src/bin/debug/netcoreapp1.1/publish
+  - cmd: dotnet build
+after_build:
+  # For once the build has completed
 notifications:
 - provider: Email
   to:
@@ -15,3 +44,17 @@ notifications:
   on_build_success: true
   on_build_failure: true
   on_build_status_changed: false
+#artifacts:
+# - path: '\src\bin\Debug\netcoreapp1.1\publish'
+#   name: WebSite
+#   type: WebDeployPackage
+clone_depth: 1
+#test_script:
+#  # restore packages for our unit tests
+#  - cmd: dotnet restore ./tests/tests.csproj --verbosity m
+#  # run the unit tests (requires changing into the test directory)
+#  - cmd: cd tests
+#  - cmd: dotnet xunit
+on_finish :
+  # any cleanup in here
+deploy: off
