@@ -16,7 +16,7 @@ It is important to note that the original SDK was written by the original develo
 
 This version transforms the original code in order to target other frameworks such as .NET Standard & Core which are not factored for in the original source code.
 
-## Target Frameworks
+## Targets
 
 + NET Framework 4.0
 + NET Framework 4.5
