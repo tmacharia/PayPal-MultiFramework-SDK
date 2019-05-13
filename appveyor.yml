@@ -34,7 +34,7 @@ before_build:
   - cmd: dotnet restore --verbosity m
 build_script:
   # output will be in ./src/bin/debug/netcoreapp1.1/publish
-  - cmd: dotnet build
+  - cmd: dotnet build --configuration Release
 after_build:
   # For once the build has completed
 notifications:

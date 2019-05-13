@@ -7,7 +7,7 @@ namespace PayPal.Util
     /// <summary>
     /// Helper class that validates arguments.
     /// </summary>
-    internal class ArgumentValidator
+    public class ArgumentValidator
     {
         /// <summary>
         /// Helper method for validating an argument that will be used by this API in any requests.

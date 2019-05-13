@@ -18,7 +18,7 @@ namespace PayPal.Api
         /// <summary>
         /// The configValue is readonly as it should not be changed outside constructor (but the content can)
         /// </summary>
-        private readonly Dictionary<string, string> configValues;
+        private  Dictionary<string, string> configValues;
 
         private static readonly Dictionary<string, string> defaultConfig;
 
@@ -32,12 +32,14 @@ namespace PayPal.Api
             defaultConfig[BaseConstants.HttpConnectionTimeoutConfig] = "30000";
             defaultConfig[BaseConstants.HttpConnectionRetryConfig] = "3";
             defaultConfig[BaseConstants.ApplicationModeConfig] = BaseConstants.SandboxMode;
+
+            //Initialize();
         }
 
         /// <summary>
         /// Singleton instance of the ConfigManager
         /// </summary>
-        private static volatile ConfigManager singletonInstance;
+        private static volatile ConfigManager singletonInstance = new ConfigManager();
 
         private static object syncRoot = new Object();
 
@@ -49,15 +51,23 @@ namespace PayPal.Api
         {
             get
             {
-                if (singletonInstance == null)
-                {
-                    lock (syncRoot)
-                    {
-                        if (singletonInstance == null)
-                            singletonInstance = new ConfigManager();
-                    }
-                }
-                return singletonInstance;
+                //if(singletonInstance.configValues.Count < 1)
+                //{
+                //    lock (syncRoot)
+                //    {
+                //        singletonInstance = new ConfigManager();
+                //    }
+                //}
+                //if (singletonInstance == null)
+                //{
+                //    lock (syncRoot)
+                //    {
+                //        if (singletonInstance == null)
+                //            singletonInstance = new ConfigManager();
+                //    }
+                //}
+                //return singletonInstance;
+                return new ConfigManager();
             }
         }
 
@@ -65,6 +75,11 @@ namespace PayPal.Api
         /// Private constructor
         /// </summary>
         private ConfigManager()
+        {
+            Initialize();
+        }
+
+        private void Initialize()
         {
             object paypalConfigSection = null;
 
@@ -87,9 +102,9 @@ namespace PayPal.Api
             {
                 NameValueConfigurationCollection settings =
                     (NameValueConfigurationCollection)
-                    paypalConfigSection.GetType().GetProperty("Settings").GetValue(paypalConfigSection, null);
-                
-                
+                    paypalConfigSection.GetType().GetProperty("settings").GetValue(paypalConfigSection, null);
+
+
                 foreach (NameValueConfigurationElement setting in settings)
                 {
                     configValues.Add(setting.Name, setting.Value);
@@ -101,7 +116,7 @@ namespace PayPal.Api
                     (ConfigurationElementCollection)
                     paypalConfigSection.GetType().GetProperty("Accounts").GetValue(paypalConfigSection, null))
                 {
-                    Account account = (Account) element;
+                    Account account = (Account)element;
                     if (!string.IsNullOrEmpty(account.APIUserName))
                     {
                         this.configValues.Add("account" + index + ".apiUsername", account.APIUserName);
@@ -134,7 +149,6 @@ namespace PayPal.Api
                 }
             }
         }
-
         /// <summary>
         /// Returns all properties from the config file
         /// </summary>

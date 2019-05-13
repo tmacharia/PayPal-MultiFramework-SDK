@@ -230,7 +230,7 @@ namespace PayPal.Api
         /// </summary>
         /// <param name="authAlgorithmHeader">The PAYPAL-AUTH-ALGO header value included with a received Webhook event.</param>
         /// <returns>A mapped hash algorithm name.</returns>
-        internal static string ConvertAuthAlgorithmHeaderToHashAlgorithmName(string authAlgorithmHeader)
+        public static string ConvertAuthAlgorithmHeaderToHashAlgorithmName(string authAlgorithmHeader)
         {
             // The PAYPAL-AUTH-ALGO header will be specified in a name recognized
             // by Java's java.security.Signature class.
