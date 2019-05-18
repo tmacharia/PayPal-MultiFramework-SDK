@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="100" src="https://cross-border-magazine.com/wp-content/uploads/2018/06/paypal.png" 
+  <img height="100" src="https://raw.githubusercontent.com/devTimmy/PayPal-MultiFramework-SDK/master/paypal-logo.png" 
 			 alt="PayPal logo" title="PayPal logo">
 </p>
 
