@@ -10,7 +10,7 @@
     <Authors>Timothy Macharia</Authors>
     <Company>Neon Clouds</Company>
     <Product>PayPal SDK</Product>
-    <Description>**Beta Version** of Multi-framework PayPal SDK for .NET developers targeting different frameworks and run-times e.g .NET Framework, .NET Core, and .NETStandard</Description>
+    <Description>Multi-framework PayPal SDK for .NET developers targeting different frameworks and run-times e.g .NET Framework, .NET Core, and .NETStandard</Description>
     <!--<PackageLicenseUrl>https://github.com/devTimmy/PayPal-MultiFramework-SDK/blob/master/README.md</PackageLicenseUrl>-->
     <PackageProjectUrl>https://devtimmy.github.io/PayPal-MultiFramework-SDK/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devTimmy/PayPal-MultiFramework-SDK</RepositoryUrl>
@@ -19,9 +19,10 @@
   </PropertyGroup>
   
   <PropertyGroup>
-    <PackageVersion>1.0.1-beta1</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <PackageIconUrl>https://raw.githubusercontent.com/devTimmy/PayPal-MultiFramework-SDK/master/paypal-logo.png</PackageIconUrl>
+    <PackageReleaseNotes>First initial clean release.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup>
