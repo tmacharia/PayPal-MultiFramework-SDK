@@ -7,7 +7,7 @@
 Multi-framework PayPal SDK for .NET developers targeting different frameworks and run-times e.g .NET Framework, .NET Core, and .NETStandard 
 
 [![Build status](https://ci.appveyor.com/api/projects/status/pp4hovop0ye54dav?svg=true)](https://ci.appveyor.com/project/devTimmy/paypal-multiframework-sdk)
-![Nuget](https://img.shields.io/nuget/v/PayPal.MultiTarget.svg?color=%23002c8a&logo=nuget&link=https://www.nuget.org/packages/PayPal.MultiTarget/1.0.0&color=%002c8a//left)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/PayPal.MultiTarget.svg?color=%23002c8a&logo=nuget&link=https://www.nuget.org/packages/PayPal.MultiTarget//left)
 ![SDK Downloads on Nuget](https://img.shields.io/nuget/dt/PayPal.MultiTarget.svg?color=%23009be1&label=downloads&logo=nuget&link=https://www.nuget.org/packages/PayPal.MultiTarget/1.0.0//left)
 
 ## Notice
