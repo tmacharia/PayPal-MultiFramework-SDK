@@ -10,7 +10,7 @@ namespace PayPal.Tests
     /// <summary>
     /// Summary description for MerchantInfoTest
     /// </summary>
-    
+    [TestFixture(TestOf = typeof(MerchantInfo))]
     public class MerchantInfoTest
     {
         public static readonly string MerchantInfoJson =

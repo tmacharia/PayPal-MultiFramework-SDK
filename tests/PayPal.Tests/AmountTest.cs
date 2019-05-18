@@ -3,7 +3,7 @@ using PayPal.Api;
 
 namespace PayPal.Tests
 {
-    
+    [TestFixture(TestOf = typeof(Amount))]
     public class AmountTest
     {
         public static readonly string AmountJson = 

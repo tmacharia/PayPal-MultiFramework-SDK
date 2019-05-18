@@ -39,7 +39,7 @@ namespace PayPal.Tests
             bool hasRequestDetails = PayPalResource.LastRequestDetails != null && PayPalResource.LastRequestDetails.Value != null;
             bool hasResponseDetails = PayPalResource.LastResponseDetails != null && PayPalResource.LastResponseDetails.Value != null;
 
-            Trace.WriteLine("  \"test\": \"" + this.TestContext.Test.Name + "\",");
+            //Trace.WriteLine("  \"test\": \"" + this.TestContext.Test.Name + "\",");
             Trace.WriteLine("  \"success\": " + success.ToString().ToLower() + (hasRequestDetails || hasResponseDetails ? "," : ""));
 
             // Record the request details.

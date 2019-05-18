@@ -5,7 +5,7 @@ using PayPal.Exception;
 
 namespace PayPal.Tests
 {
-    
+    [TestFixture(TestOf = typeof(CreditCard))]
     public class CreditCardTest : BaseTest
     {
         public static readonly string CreditCardJson = "{" +

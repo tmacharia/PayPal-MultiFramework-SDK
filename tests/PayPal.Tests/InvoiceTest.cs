@@ -11,7 +11,7 @@ namespace PayPal.Tests
     /// <summary>
     /// Summary description for InvoiceTest
     /// </summary>
-    
+    [TestFixture(TestOf = typeof(Invoice))]
     public class InvoiceTest : BaseTest
     {
         public static readonly string InvoiceJson =

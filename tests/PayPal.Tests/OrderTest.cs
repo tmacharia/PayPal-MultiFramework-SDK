@@ -7,7 +7,7 @@ namespace PayPal.Tests
     /// <summary>
     /// Summary description for OrderTest
     /// </summary>
-    
+    [TestFixture(TestOf = typeof(Order))]
     public class OrderTest : BaseTest
     {
         public static Order GetOrder()
