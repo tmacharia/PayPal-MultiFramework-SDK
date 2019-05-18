@@ -75,7 +75,8 @@ Replace the *clientId* and *clientSecret* with your own keys from [PayPal Develo
 + NET Core 2.0
 + NET Standard 2.0
 
-## Attributions
+
+## Credits
 
 This project was inspired by the [Original .NET SDK](https://github.com/paypal/PayPal-NET-SDK) by [PayPal](https://github.com/paypal) and majority of the credits should go to them. You can check out their repository for further insights.
 
