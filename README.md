@@ -21,7 +21,7 @@ This version transforms the original code in order to target other frameworks su
 Install the SDK package from Nuget by running the following command in Package Manager Console.
 
 ```bash
-Install-Package PayPal.MultiTarget -Version 1.0.1-beta1
+Install-Package PayPal.MultiTarget -Version 1.0.1
 ```
 Once installed, you need to define the configuration file from which the package will read settings from. If you have a Web.config or App.config file, just copy the settings below and them to your file, otherwise create a new App.Config file in the root folder of your application and add this settings therein. 
 
